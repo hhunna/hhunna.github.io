@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+<header>
+	<nav>
+		<div class="nav-left">
+			<a href="index.html">
+				<img class="logo" src="Images/MCN.png" alt="Logo Mediation Culturelle et Numérique">
+			</a>
+		</div>
+		
+		<div class="menu-toggle" id="menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<ul id="nav-links">
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="architecture_monuments.html">Architecture/Monuments</a></li>
+			<li><a href="culture.html">Culture</a></li>
+			<li><a href="carte.html">Carte Interactive</a></li>
+			<li><a href="pratique.html">Pratique</a></li>
+			<li><a href="reservation.html">Réservation</a></li>
+			<li><a href="https://www.tripadvisor.fr/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomie</a></li>
+			<li><a href="https://www.turismodecordoba.org/">Actualités</a></li>
+			<li class="langue">
+				<div class="langue"><a class="active2" href="">FR</a> <div class="Vline"></div> <a href="mentions_legales_EN.html">EN</a></div>
+			</li>
+		</ul>
+	</nav>
+</header>
+<section class="mentions_legales">
+    <div class="mentions-item">
+        <h1>Mentions Légales</h1>
+		<ol>
+			<li class="part">
+				<h2>Informations Générales</h2>
+				<ul>
+					<li>Le présent site a pour objet de mettre en avant le patrimoine mondial de l'UNESCO sur la ville de Cordoue.</li>
+					<li>Il est géré par un groupe d'étudiants de l'Université Gustave Eiffel.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Éditeurs du Site</h2>
+				<ul>
+					<li>Noms des responsables :
+						<ul>
+							<li>Théo Jullien</li>
+							<li>Sofyane Mechety</li>
+							<li>Yanis Mechety</li>
+							<li>Jordan Oshoffa</li><br>
+						</ul>
+					</li>
+					<li>Statut : Étudiants à l'Université Gustave Eiffel</li>
+					<li>Adresse : Université Gustave Eiffel, Champs-sur-Marne, France</li>
+					<li>Email de contact : cordoue8@gmail.com</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Hébergeur du Site</h2>
+				<ul>
+					<li>Nom de l'hébergeur : GitHub Enterprise Server</li>
+					<li>Adresse : [Adresse temporaire]</li>
+					<li>Contact : [Email/Téléphone temporaire]</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Propriété Intellectuelle</h2>
+				<ul>
+					<li>Les contenus publiés sur ce site sont destinés à l'information du public sur le patrimoine de Cordoue.</li>
+					<li>Interdiction de copier/coller intégralement les contenus du site.</li>
+					<li>Utilisation des informations autorisée sans restriction, à condition de ne pas en revendiquer la propriété.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Responsabilités</h2>
+				<ul>
+					<li>Les éditeurs du site ne peuvent être tenus responsables des erreurs ou omissions dans les informations publiées.</li>
+					<li>Le site peut contenir des liens externes vers d'autres sites, mais nous ne sommes pas responsables de leur contenu.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Utilisation des Cookies</h2>
+				<ul>
+					<li>Actuellement, ce site ne collecte ni n'exploite de cookies.</li>
+				</ul>
+			</li>
+		</ol>
+    </div>
+</section>
+
+<footer>
+    <p>Site créer par des étudiants en BUT Informatique - Première année</p>
+    <a href="mentions_legales.html" class="copyright">&copy Mentions légales</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

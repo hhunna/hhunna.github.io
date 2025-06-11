@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">
+                    <img class="logo" src="Images/MCN.png" alt="Logo Mediation Culturelle et Numérique">
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul id="nav-links">
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="architecture_monuments.html">Architecture/Monuments</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="carte.html">Carte Interactive</a></li>
+                <li><a href="pratique.html">Pratique</a></li>
+                <li><a href="reservation.html">Réservation</a></li>
+                <li><a href="https://www.tripadvisor.fr/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomie</a></li>
+                <li><a href="https://www.turismodecordoba.org/">Actualités</a></li>
+                <li class="langue">
+                    <div class="langue"><a class="active2" href="">FR</a> <div class="Vline"></div> <a href="index_EN.html">EN</a></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+<!-- Vidéo de présentation -->
+
+<div class="accueil">
+    <div class="accueil-item">
+        <video autoplay muted loop playsinline style="width:100%; height:auto; display:block;">
+            <source src="Videos/cordoue_presentation.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+    </div>
+</div>
+
+<footer>
+    <p>Site créer par des étudiants en BUT Informatique - Première année</p>
+    <a href="mentions_legales.html" class="copyright">&copy Mentions légales</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

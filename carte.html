@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img class="logo" src="Images/MCN.png" alt="Logo Mediation Culturelle et Numérique">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="architecture_monuments.html">Architecture/Monuments</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a class="active" href="carte.html">Carte Interactive</a></li>
+            <li><a href="pratique.html">Pratique</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="https://www.tripadvisor.fr/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomie</a></li>
+            <li><a href="https://www.turismodecordoba.org/">Actualités</a></li>
+            <li class="langue">
+                <div class="langue"><a class="active2" href="">FR</a> <div class="Vline"></div> <a href="carte_EN.html">EN</a></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="carte">
+    <h1>Carte Interactive et Itinéraires</h1>
+    <div class="box-carte">
+        <div class="box-left">
+            <h2>Carte des Monuments</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50378.57937291861!2d-4.825685143490232!3d37.891604957599405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf26f95e0aef%3A0x4df1d2e8108456c3!2sCordoue%2C%20Espagne!5e0!3m2!1sfr!2sfr!4v1736861009579!5m2!1sfr!2sfr" 
+                    width="600" 
+                    height="800" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="boxbox">
+                <h2>Demi-journée</h2>
+                <h3>Visite express du centre historique</h3>
+                <ul>
+                    <li>Mosquée-Cathédrale (2h)</li>
+                    <li>Déjeuner dans le quartier juif (1h)</li>
+                    <li>Promenade sur le Pont Romain (30min)</li>
+                </ul>
+            </div>
+            <div class="boxbox">
+                <h2>Une journée</h2>
+                <h3>Les incontournables de Cordoue</h3>
+                <ul>
+                    <li>Mosquée-Cathédrale (2h)</li>
+                    <li>Quartier juif et synagogue (1h)</li>
+                    <li>Déjeuner (1h30)</li>
+                    <li>Alcázar et ses jardins (2h)</li>
+                    <li>Promenade dans les ruelles et patios (1h30)</li>
+                </ul>
+            </div>
+            <div class="boxbox">
+                <h2>Deux jours</h2>
+                <h3>Exploration complète</h3>
+                <ul class="liste-decale">
+                    <li class="liste-titre">Jour 1: Centre historique</li>
+                    <ul>
+                        <li>Mosquée-Cathédrale</li>
+                        <li>Quartier juif</li>
+                        <li>Alcázar</li>
+                    </ul>
+                    <li class="liste-titre">Jour 2: Aux alentours</li>
+                    <ul>
+                        <li>Medina Azahara</li>
+                        <li>Palais de Viana</li>
+                        <li>Soirée flamenco</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    <p>Site créer par des étudiants en BUT Informatique - Première année</p>
+    <a href="mentions_legales.html" class="copyright">&copy Mentions légales</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Interactives Reservations</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+      
+<body>
+    <header class="header-bar">
+        <a href="index.html">
+            <img src="Images/MCN-transparent.png" alt="Logo Mediation Culturelle et Numérique" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="architecture_monuments.html">Architecture/Monuments</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="carte.html">Interactive Map</a></li>
+            <li><a href="pratique.html">Pratical</a></li>
+            <li><a href="reservation.html" class="active-link">Reservation</a></li>
+            <li><a href="https://www.tripadvisor.com/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomy</a></li>
+            <li><a href="https://www.turismodecordoba.org/">News</a></li>
+            <div class="langue">
+                <a href="reservation.html">FR</a>
+                <div class="Vline"></div>
+                <a class="active-link" href="reservation_EN.html">EN</a>
+            </div>
+        </ul>
+    </header>    
+
+<h1>Interactives Reservations</h1>
+
+<div class="container" id="reservation-cards">
+    <!-- Les 3 cartes seront insérées ici dynamiquement -->
+</div>
+
+<div class="popup" id="popup">✅ Réservation confirmée !</div>
+
+<footer>
+    <p>Contact : <a href="mailto:cordoue8@gmail.com">cordoue8@gmail.com</a></p>
+    <p class="signature">Site créé par des étudiants en BUT Informatique – Première année</p>
+	<a href="mentions_legales_EN.html"><p>&copy Mentions légales</p></a>
+</footer>
+
+<script>
+    const activités = [
+        {
+            titre: "Mosquée-Cathédrale",
+            image: "Images/mosquee.jpg",
+            description: "Visite guidée avec un expert local.",
+            prix: "25€",
+            duree: "2h",
+            max: "15 visiteurs",
+            horaires: ["10:00", "14:00", "18:00"]
+        },
+        {
+            titre: "Tour de la Vieille Ville",
+            image: "Images/vieilleVille.jpg",
+            description: "Explorez les ruelles historiques avec un guide passionné.",
+            prix: "20€",
+            duree: "1h30",
+            max: "20 visiteurs",
+            horaires: ["09:00", "11:30", "15:00"]
+        },
+        {
+            titre: "Expérience Gastronomique",
+            image: "Images/gastronomie.jpg",
+            description: "Dégustez les spécialités locales avec un chef de Cordoue.",
+            prix: "45€",
+            duree: "3h",
+            max: "10 visiteurs",
+            horaires: ["12:00", "18:00"]
+        }
+    ];
+
+    const container = document.getElementById("reservation-cards");
+
+    activités.forEach((act) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+        <h2 class="titre">${act.titre}</h2>
+      <img src="${act.image}" alt="Image de ${act.titre}" style="width:100%; height:auto; max-height:180px; object-fit:cover; border-radius:6px; display:block; margin-bottom:10px;">
+
+
+        <p>${act.description}</p>
+        <p class="prix">${act.prix}</p>
+        <p>🕒 Durée : ${act.duree}</p>
+        <p>👥 Max ${act.max}</p>
+        <label>Date :</label>
+        <div class="calendar">
+          <div class="calendar-header">Mars 2025</div>
+          <div class="calendar-grid">
+            ${["Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"].map(j => `<div class="calendar-day">${j}</div>`).join("")}
+            ${Array.from({ length: 31 }, (_, i) => `<div class="calendar-date">${i + 1}</div>`).join("")}
+          </div>
+        </div>
+        <label>Horaires :</label>
+        <div class="horaires">
+          ${act.horaires.map(h => `<button>${h}</button>`).join("")}
+        </div>
+        <label>Visiteurs :</label>
+        <select><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button class="btn-reserver">Réserver maintenant</button>
+      `;
+        container.appendChild(card);
+    });
+
+    // Sélection de dates
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("calendar-date")) {
+            const calendar = e.target.closest(".calendar");
+            calendar.querySelectorAll(".calendar-date").forEach(d => d.classList.remove("selected"));
+            e.target.classList.add("selected");
+        }
+    });
+
+    // Sélection d'horaire
+    document.addEventListener("click", (e) => {
+        if (e.target.parentElement && e.target.parentElement.classList.contains("horaires")) {
+            const horaires = e.target.parentElement;
+            horaires.querySelectorAll("button").forEach(b => b.classList.remove("selected"));
+            e.target.classList.add("selected");
+        }
+    });
+
+    // Réservation confirmation
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-reserver")) {
+            const popup = document.getElementById("popup");
+            popup.classList.add("show");
+            setTimeout(() => popup.classList.remove("show"), 2500);
+        }
+    });
+</script>
+</body>
+</html>

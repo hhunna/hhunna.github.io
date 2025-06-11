@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img class="logo" src="Images/MCN.png" alt="Logo Mediation Culturelle et Numérique">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="architecture_monuments.html">Architecture/Monuments</a></li>
+            <li><a class="active" href="culture.html">Culture</a></li>
+            <li><a href="carte.html">Carte Interactive</a></li>
+            <li><a href="pratique.html">Pratique</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="https://www.tripadvisor.fr/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomie</a></li>
+            <li><a href="https://www.turismodecordoba.org/">Actualités</a></li>
+            <li class="langue">
+                <div class="langue"><a class="active2" href="">FR</a> <div class="Vline"></div> <a href="culture_EN.html">EN</a></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="page-culture">
+    <h1>Culture et Découverte</h1>
+    <div class="boite">
+        <h2>Traditions Locales</h2>
+        <div class="boite2">
+            <div class="boite3">
+                <h3>La Feria de Cordoue</h3>
+                <img src="Images/feria-cordoue.jpeg">
+                <p>Festival annuel en mai célébrant la culture andalouse avec flamenco, chevaux et gastronomie locale.</p>
+            </div>
+            <div class="boite3">
+                <h3>Les Patios de Cordoue</h3>
+                <img class="reduire" src="Images/patios-cordoue.jpeg">
+                <p>En mai, les habitants ouvrent leurs patios fleuris au public, une tradition inscrite au patrimoine de l'UNESCO.</p>
+            </div>
+        </div>
+    </div>
+    <div class="boite">
+        <h2>Parcours Touristiques</h2>
+        <div class="boite2">
+            <div class="boite3">
+                <h3>Demi-journée</h3>
+                <img src="Images/demi_journee.jpg">
+                <p>Visite de la Mezquita-Cathédrale et promenade dans la Judería (quartier juif).</p>
+            </div>
+            <div class="boite3">
+                <h3>Journée complète</h3>
+                <img class="reduire" src="Images/journee_complete.jpg">
+                <p>Mezquita, Judería, Alcázar des Rois Chrétiens et les Patios.</p>
+            </div>
+            <div class="boite3">
+                <h3>Deux jours</h3>
+                <img class="reduire" src="Images/deux_jours.jpg">
+                <p>Programme complet incluant Medina Azahara et les musées de la ville.</p>
+            </div>
+        </div>
+    </div>
+    <div class="boite">
+        <h2>Medina Azahara</h2>
+        <div class="boite2">
+            <div class="boite3">
+                <h3>Cité Palatine</h3>
+                <img src="Images/demi_journee.jpg">
+                <p>Site archéologique majeur à 6km de Cordoue, ancienne ville palatine construite au Xe siècle.</p>
+            </div>
+        </div>
+    </div>
+    <div class="boites-container">
+        <div class="vertical-bar-global"></div> <!-- Barre unique -->
+        <div class="boite gauche">
+            <p><strong>785</strong><br>
+            Début de la construction de la Grande Mosquée</p>
+        </div>
+        <div class="boite droite">
+            <p><strong>936</strong><br>
+            Construction de Medina Azahara</p>
+        </div>
+        <div class="boite gauche">
+            <p><strong>1236</strong><br>
+            Reconquête de Cordoue par Ferdinand III</p>
+        </div>
+        <div class="boite droite">
+            <p><strong>1523</strong><br>
+            Début de la construction de la cathédrale dans la mosquée</p>
+        </div>
+        <div class="boite gauche">
+            <p><strong>1984</strong><br>
+            La Mosquée-Cathédrale est classée au patrimoine mondial de l'UNESCO</p>
+        </div>
+        <div class="boite droite">
+            <p><strong>2012</strong><br>
+            Les Patios de Cordoue sont inscrits au patrimoine immatériel de l'UNESCO</p>
+        </div>
+    </div>
+    <div class="boite">
+        <h2>Testez vos connaissances</h2>
+        <div class="boite2-quiz">
+            <div class="boite3-quiz">
+                <div>
+                    <h2 class="titre-blanc">Quiz Histoire</h2>
+                    <p>Testez vos connaissances sur l'histoire de Cordoue</p>
+                </div>
+                <div>
+                    <a href="">Commencez le quiz</a>
+                </div>
+            </div>
+            <div class="boite3-quiz">
+                <div>
+                    <h2 class="titre-blanc">Quiz Culture</h2>
+                    <p>Découvrez la richesse culturelle de Cordoue</p>
+                </div>
+                <div>
+                    <a href="">Commencez le quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Site créer par des étudiants en BUT Informatique - Première année</p>
+    <a href="mentions_legales.html" class="copyright">&copy Mentions légales</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

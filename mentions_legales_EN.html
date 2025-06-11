@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav-left">
+				<a href="index.html">
+					<img class="logo" src="Images/MCN.png" alt="Logo Mediation Culturelle et Numérique">
+				</a>
+			</div>
+			
+			<div class="menu-toggle" id="menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+	
+			<ul id="nav-links">
+				<li><a href="index_EN.html">Home</a></li>
+				<li><a href="architecture_monuments_EN.html">Architecture/Monuments</a></li>
+				<li><a href="culture_EN.html">Culture</a></li>
+				<li><a href="carte_EN.html">Interactive Map</a></li>
+				<li><a href="pratique_EN.html">Pratical</a></li>
+				<li><a href="reservation_EN.html">Reservation</a></li>
+				<li><a href="https://www.tripadvisor.com/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomy</a></li>
+				<li><a href="https://www.turismodecordoba.org/">News</a></li>
+				<li class="langue">
+					<div class="langue"><a href="mentions_legales.html">FR</a> <div class="Vline"></div> <a class="active2" href="mentions_legales_EN.html">EN</a></div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+<section class="mentions_legales">
+	<div class="mentions-item">
+		<h1>Legal Notices</h1>
+		<ol>
+			<li class="part">
+				<h2>General Information</h2>
+				<ul>
+					<li>This website aims to highlight UNESCO World Heritage in the city of Cordoba.</li>
+					<li>It is managed by a group of students from Gustave Eiffel University.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Website Editors</h2>
+				<ul>
+					<li>Responsible individuals:
+						<ul>
+							<li>Théo Jullien</li>
+							<li>Sofyane Mechety</li>
+							<li>Yanis Mechety</li>
+							<li>Jordan Oshoffa</li><br>
+						</ul>
+					</li>
+					<li>Status: Students at Gustave Eiffel University</li>
+					<li>Address: Gustave Eiffel University, Champs-sur-Marne, France</li>
+					<li>Contact email: cordoue8@gmail.com</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Website Hosting</h2>
+				<ul>
+					<li>Hosting provider: GitHub Enterprise Server</li>
+					<li>Address: [Temporary address]</li>
+					<li>Contact: [Temporary email/phone]</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Intellectual Property</h2>
+				<ul>
+					<li>The content published on this site is intended to inform the public about Cordoba's heritage.</li>
+					<li>Copying/pasting the site's content in full is prohibited.</li>
+					<li>Information may be used freely, as long as no ownership is claimed.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Liability</h2>
+				<ul>
+					<li>The site editors cannot be held responsible for any errors or omissions in the published information.</li>
+					<li>The site may contain external links to other websites, but we are not responsible for their content.</li>
+				</ul>
+			</li>
+			
+			<li class="part">
+				<h2>Use of Cookies</h2>
+				<ul>
+					<li>Currently, this site does not collect or use cookies.</li>
+				</ul>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<footer>
+    <p>Site created by students in the Computer Science BUT - First year</p>
+    <a href="mentions_legales_EN.html" class="copyright">&copy Legal notices</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

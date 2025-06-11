@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="index_EN.html">
+                <img class="logo" src="Images/MCN.png" alt="Cultural and Digital Mediation Logo">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index_EN.html">Home</a></li>
+            <li><a href="architecture_monuments_EN.html">Architecture/Monuments</a></li>
+            <li><a href="culture_EN.html">Culture</a></li>
+            <li><a class="active" href="carte_EN.html">Interactive Map</a></li>
+            <li><a href="pratique_EN.html">Pratical</a></li>
+            <li><a href="reservation_EN.html">Reservation</a></li>
+            <li><a href="https://www.tripadvisor.com/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomy</a></li>
+            <li><a href="https://www.turismodecordoba.org/">News</a></li>
+            <li class="langue">
+                <div class="langue"><a href="carte.html">FR</a> <div class="Vline"></div> <a class="active2" href="">EN</a></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="carte">
+    <h1>Interactive Map and Itineraries</h1>
+    <div class="box-carte">
+        <div class="box-left">
+            <h2>Map of Monuments</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50378.6208117143!2d-4.7844853!3d37.8915444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf26f95e0aef%3A0x4df1d2e8108456c3!2zQ8OzcmRvYmEsIFNwYWlu!5e0!3m2!1sen!2sfr!4v1749393832733!5m2!1sen!2sfr" width="600" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="boxbox">
+                <h2>Half-Day</h2>
+                <h3>Express Tour of the Historic Center</h3>
+                <ul>
+                    <li>Mosque-Cathedral (2h)</li>
+                    <li>Lunch in the Jewish Quarter (1h)</li>
+                    <li>Walk on the Roman Bridge (30min)</li>
+                </ul>
+            </div>
+            <div class="boxbox">
+                <h2>One Day</h2>
+                <h3>Córdoba's Must-Sees</h3>
+                <ul>
+                    <li>Mosque-Cathedral (2h)</li>
+                    <li>Jewish Quarter and Synagogue (1h)</li>
+                    <li>Lunch (1h30)</li>
+                    <li>Alcázar and its Gardens (2h)</li>
+                    <li>Walk through Alleys and Patios (1h30)</li>
+                </ul>
+            </div>
+            <div class="boxbox">
+                <h2>Two Days</h2>
+                <h3>Complete Exploration</h3>
+                <ul class="liste-decale">
+                    <li class="liste-titre">Day 1: Historic Center</li>
+                    <ul>
+                        <li>Mosque-Cathedral</li>
+                        <li>Jewish Quarter</li>
+                        <li>Alcázar</li>
+                    </ul>
+                    <li class="liste-titre">Day 2: Surroundings</li>
+                    <ul>
+                        <li>Medina Azahara</li>
+                        <li>Palace of Viana</li>
+                        <li>Flamenco Evening</li>
+                    </ul>
+                </ul>
+            </div>            
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    <p>Site created by students in the Computer Science BUT - First year</p>
+    <a href="mentions_legales_EN.html" class="copyright">&copy Legal notices</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoue - Unesco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="index_EN.html">
+                <img class="logo" src="Images/MCN.png" alt="Cultural and Digital Mediation Logo">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a class="active" href="index_EN.html">Home</a></li>
+            <li><a href="architecture_monuments_EN.html">Architecture/Monuments</a></li>
+            <li><a href="culture_EN.html">Culture</a></li>
+            <li><a href="carte_EN.html">Interactive Map</a></li>
+            <li><a href="pratique_EN.html">Pratical</a></li>
+            <li><a href="reservation_EN.html">Reservation</a></li>
+            <li><a href="https://www.tripadvisor.com/Restaurants-g187430-Cordoba_Province_of_Cordoba_Andalucia.html">Gastronomy</a></li>
+            <li><a href="https://www.turismodecordoba.org/">News</a></li>
+            <li class="langue">
+                <div class="langue"><a href="index.html">FR</a> <div class="Vline"></div> <a class="active2" href="">EN</a></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+<!-- Vidéo de présentation -->
+
+<div class="accueil">
+    <div class="accueil-item">
+        <video autoplay muted loop playsinline style="width:100%; height:auto; display:block;">
+            <source src="Videos/cordoue_presentation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+</div>
+
+<footer>
+    <p>Site created by students in the Computer Science BUT - First year</p>
+    <a href="mentions_legales_EN.html" class="copyright">&copy Legal notices</a>
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>

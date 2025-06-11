@@ -51,6 +51,7 @@
     <div class="section-smaller">
         <h2>Météo à Cordoue</h2>
         <p id="temp" style="font-size: 32px; font-weight: bold;">--°C</p>
+        <p id="description">—</p>
         <p>Humidité: <strong id="humidity">--%</strong></p>
         <p>Vent: <strong id="wind">-- km/h</strong></p>
     </div>
@@ -128,18 +129,40 @@
             });
     }
 
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.88&longitude=-4.77&current_weather=true")
-        .then(res => res.json())
-        .then(data => {
-            const weather = data.current_weather;
-            document.getElementById("temp").textContent = `${weather.temperature}°C`;
-            document.getElementById("description").textContent = weather.weathercode === 0 ? "Ensoleillé" : "Variable";
-            document.getElementById("humidity").textContent = '--';
-            document.getElementById("wind").textContent = `${weather.windspeed} km/h`;
-        })
-        .catch(() => {
-            document.getElementById("description").textContent = "Erreur lors du chargement.";
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.88&longitude=-4.77&current_weather=true&hourly=relative_humidity_2m")
+    .then(res => res.json())
+    .then(data => {
+        const weather = data.current_weather;
+        document.getElementById("temp").textContent = `${weather.temperature}°C`;
+        document.getElementById("description").textContent = weather.weathercode === 0 ? "Ensoleillé" : "Variable";
+        document.getElementById("wind").textContent = `${weather.windspeed} km/h`;
+
+        // Cherche l'humidité correspondant à l'heure actuelle
+        // Recherche l'humidité correspondant à l'heure actuelle (approximation)
+        const currentWeatherTime = new Date(weather.time);
+        let bestMatchIndex = -1;
+        let minDiff = Infinity;
+
+        data.hourly.time.forEach((time, i) => {
+            const hourlyTime = new Date(time);
+            const diff = Math.abs(hourlyTime - currentWeatherTime);
+            if (diff < minDiff) {
+                minDiff = diff;
+                bestMatchIndex = i;
+            }
         });
+
+        if (bestMatchIndex !== -1) {
+            const humidity = data.hourly.relative_humidity_2m[bestMatchIndex];
+            document.getElementById("humidity").textContent = `${humidity}%`;
+        } else {
+            document.getElementById("humidity").textContent = "N/A";
+        }
+
+    })
+    .catch(() => {
+        document.getElementById("description").textContent = "Erreur lors du chargement.";
+    });
 
     function calculateItinerary() {
         const start = startInput.value;
